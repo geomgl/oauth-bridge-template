@@ -1,8 +1,11 @@
 let express = require('express')
 let request = require('request')
 let querystring = require('querystring')
+var cors = require('cors');
+
 
 let app = express()
+app.use(cors())
 
 let redirect_uri = 
   process.env.REDIRECT_URI || 
